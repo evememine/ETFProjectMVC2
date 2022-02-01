@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 
-public class ETFproject {
+public class ETFProject {
 	/** ETF 이름 */
 	private String etfName;
 	
@@ -30,31 +30,14 @@ public class ETFproject {
 
 	/** 진행되는 project의 상세 내용 */
 	private String EtfProjectDetail;
-	
+
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append(System.getProperty("line.separator"));
-		builder.append("ETFProject [etfName=");
-		builder.append(etfName);
-		builder.append(System.getProperty("line.separator"));
-		builder.append("ETF 객체 : ");
-		builder.append(projectEtf);
-		builder.append(System.getProperty("line.separator"));
-		builder.append("구매자 : ");
-		builder.append(projectEtfCustomer);
-		builder.append(System.getProperty("line.separator"));
-		builder.append("판매자 : ");
-		builder.append(projectEtfManager);
-		builder.append(System.getProperty("line.separator"));
-		builder.append("ETF 매수한 날짜 : ");
-		builder.append(startDate);
-		builder.append(", 프로젝트 상세 사항 : ");
-		builder.append(EtfProjectDetail);
-		builder.append("]");
-		builder.append(System.getProperty("line.separator"));
-		return builder.toString();
+		return "ETFProject [etfName=" + etfName + ", projectEtf=" + projectEtf + ", projectEtfCustomer="
+				+ projectEtfCustomer + ", projectEtfManager=" + projectEtfManager + ", startDate=" + startDate
+				+ ", EtfProjectDetail=" + EtfProjectDetail + "]";
 	}
+	
 
 
 }
